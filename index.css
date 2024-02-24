@@ -1,0 +1,24 @@
+
+
+body{
+    display: flex;
+}
+
+.left-side{
+    display: flex;
+    align-content: center;
+    background-color: rgb(10, 104, 104);
+    width: 400px;
+    height: 700px;
+}
+
+.frmAddbook{
+    display: grid;
+    height: 400px;
+    width: 300px;
+    grid-template-rows: 50px 50px 50px 50px;
+}
+
+.frmAddbook > div {
+    margin-left: 30px;
+}
