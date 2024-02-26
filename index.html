@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <script src="index.js" defer></script>
 </head>
 <body>
     <div class="left-side">
@@ -21,11 +22,16 @@
                 </div>
                 <div>
                     <label for="pages">Number of pages</label><br>
-                    <input type="text" name="pages" id="pages">
+                    <input type="number" name="pages" id="pages">
                 </div>
                 <div>
                     <label for="read">Status</label><br>
                     <input type="radio" name="read" id="read">
+                    
+                </div>
+
+                <div>
+                    <button type="submit" id="btn-submit">Add a book</button>
                 </div>
                 
             </form>
