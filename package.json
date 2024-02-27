@@ -1,0 +1,19 @@
+{
+  "name": "library_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ridokunda/Library_App.git"
+  },
+  "author": "Ridokunda",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ridokunda/Library_App/issues"
+  },
+  "homepage": "https://github.com/Ridokunda/Library_App#readme"
+}

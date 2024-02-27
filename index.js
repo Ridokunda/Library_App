@@ -1,4 +1,4 @@
-console.log("hello world")
+
 
 const myLibrary = [];
 
@@ -17,7 +17,7 @@ myLibrary[0] = book1;
 
 function addBookToLibrary(name, author, pages, read){
     let book = new Book(name, author, pages, read);
-    myLibrary.add(book);
+    myLibrary.push(book);
 }
 
 console.log(myLibrary);
@@ -50,5 +50,7 @@ function displayBooks(){
 
     
 }
+
+module.exports.addBookToLibrary = addBookToLibrary();
 
 displayBooks();
