@@ -44,7 +44,7 @@ body{
     padding-left: 20px;
 }
 
-#btn-submit{
+.btn{
     color:white;
     background-color:rgb(10, 104, 104) ;
     height: 40px;
