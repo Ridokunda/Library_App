@@ -17,12 +17,12 @@ body{
     padding: 0px;
 }
 
-.right-side{
+/* .right-side{
     display:grid;
    grid-template-rows: 80px;
    grid-template-columns: 200px;
    padding: 20px;
-}
+} */
 
 .frmAddbook{
     color: rgb(10, 104, 104);
