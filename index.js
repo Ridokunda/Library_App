@@ -51,7 +51,7 @@ function clearBooks() {
 function displayBooks() {
     const right = document.querySelector(".right-side");
     right.style = "display:grid; grid-template-rows: 100px 100px 100px; grid-template-columns:200px 200px 200px; gap:10px;";
-    
+
     // Clear previous display
     right.innerHTML = "";
 
@@ -65,20 +65,39 @@ function displayBooks() {
         for (let i = 0; i < myLibrary.length; i++) {
             const div = document.createElement('div');
             div.classList.add('book');
-            div.style = "display:flex; flex-direction:column; border: solid 1px black; border-radius:10px; background-color: aqua; padding: 10px";
+            div.style = "display:flex; flex-direction:column; border: solid 1px black; border-radius:10px; background-color: aqua; padding: 10px; position: relative;";
 
             const div1 = document.createElement('div');
             const div2 = document.createElement('div');
             const div3 = document.createElement('div');
+            const deleteBtn = document.createElement('button');
 
             div1.textContent = "Book name: " + myLibrary[i].name;
             div2.textContent += "Book Author: " + myLibrary[i].author;
             div3.textContent += "Number of pages: " + myLibrary[i].pages;
 
+            // Style the delete button
+            deleteBtn.textContent = "Delete";
+            deleteBtn.classList.add('delete-btn');
+            deleteBtn.style = "margin-top: 10px; align-self: flex-end;"; // Ensure button stays inside the box
+
+            // Add click event listener to delete the book
+            deleteBtn.addEventListener('click', () => {
+                deleteBook(i);
+            });
+
+            // Append all elements to the book div
             div.appendChild(div1);
             div.appendChild(div2);
             div.appendChild(div3);
+            div.appendChild(deleteBtn);
             right.appendChild(div);
         }
     }
+}
+
+// Function to delete a book from the library
+function deleteBook(index) {
+    myLibrary.splice(index, 1); // Removes the book from the library by index
+    displayBooks(); // Re-render the books
 }
